@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Ensure full height layout */
+ html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+/* Root flex container */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%
+}
+/* .app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+} */
+
+/* Main content should take all available space */
+.page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 120px); /* 100vh minus Navbar & Footer height */
+  padding: 40px;
+  justify-content: center; /* center content vertically */
+  align-items: center;     /* center content horizontally*/
+} 

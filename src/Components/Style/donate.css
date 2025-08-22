@@ -1,0 +1,330 @@
+/* Donation Container */
+.donate-container {
+  @apply flex flex-col lg:flex-row gap-6 p-6 lg:p-10 bg-[#f3eff9];
+}
+
+/* Donation Form */
+.donate-form {
+  @apply flex-1 bg-white p-6 rounded-xl shadow-md;
+}
+
+.title {
+  @apply text-purple-700 font-semibold mb-5 text-2xl;
+}
+
+.form-section {
+  @apply mb-5;
+}
+
+/* Inputs & Labels */
+.form-section input[type="text"],
+.form-section input[type="email"],
+.form-section input[type="tel"],
+.form-section input[type="date"],
+.form-section input[type="number"],
+.form-section select,
+.form-section textarea,
+.form-section label {
+  @apply m-1;
+}
+
+.form-section input[type="checkbox"] {
+  @apply m-0;
+}
+
+.input-row {
+  @apply flex flex-col md:flex-row gap-4 my-3;
+}
+
+/* Donation Amount Options */
+.amount-options {
+  @apply flex flex-wrap gap-4 mt-4;
+}
+
+.amount-card {
+  @apply p-3 cursor-pointer transition duration-300 border rounded-lg hover:bg-gray-100;
+}
+
+.amount-card input {
+  @apply mr-2;
+}
+
+input, select, textarea {
+  @apply flex-1 p-2 border border-gray-300 rounded-md;
+}
+
+textarea {
+  @apply w-full min-h-[70px];
+}
+
+.form-section a {
+  @apply text-blue-500 cursor-pointer hover:underline;
+}
+
+/* Floating Declaration Modal */
+.floating-overlay {
+  @apply fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-[999];
+}
+
+.floating-declaration {
+  @apply bg-white rounded-xl w-11/12 max-w-2xl max-h-[80vh] flex flex-col shadow-2xl;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+
+.declaration-header {
+  @apply flex justify-between items-center px-5 py-3 border-b bg-gray-100;
+}
+
+.declaration-header h2 {
+  @apply text-xl font-semibold text-purple-900;
+}
+
+.close-btn {
+  @apply bg-transparent border-0 text-xl cursor-pointer text-gray-700;
+}
+
+.declaration-body {
+  @apply p-5 overflow-y-auto flex-1 text-gray-700 leading-relaxed text-sm;
+}
+
+.declaration-footer {
+  @apply px-5 py-3 border-t flex justify-end;
+}
+
+.declaration-footer button {
+  @apply px-5 py-2 bg-purple-700 text-white rounded-md hover:bg-purple-900 transition;
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Donate Button */
+.donate-btn {
+  @apply w-full py-4 bg-green-600 text-white text-lg rounded-lg cursor-pointer transition hover:bg-green-700;
+}
+
+/* Right Side Info */
+.donate-info {
+  @apply flex-1 flex flex-col gap-6 mt-6 lg:mt-0;
+}
+
+.info-box {
+  @apply bg-white p-5 rounded-xl shadow-md;
+}
+
+/*.donate-container {
+  display: flex;
+  gap: 30px;
+  padding: 40px;
+  background: #f3eff9;
+}
+
+.donate-form {
+  flex: 2;
+
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.title {
+  color: hsl(267, 77%, 46%);
+  margin-bottom: 20px;
+}
+
+.form-section {
+  margin-bottom: 20px;
+
+}
+/* Apply margin only to text-like inputs 
+.form-section input[type="text"],
+.form-section input[type="email"],
+.form-section input[type="tel"],
+.form-section input[type="date"],
+.form-section input[type="number"],
+.form-section select,
+.form-section textarea,
+.form-section label {
+  margin: 0.2rem;
+}
+
+/* Reset checkbox margin so it aligns with text 
+.form-section input[type="checkbox"] {
+  margin: 0;
+}
+
+
+.input-row {
+  display: flex;
+  gap: 15px;
+  margin: 10px 0;
+}
+.amount-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.amount-card {
+  padding :10px;
+  /* padding: 15px 25px; 
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.amount-card input {
+  margin-right: 8px;
+}
+
+input, select, textarea {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+
+}
+textarea{
+  width: 100%;
+  min-height: 70px;
+}
+.form-section a{
+  color: dodgerblue;
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal{
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+/* Floating Declaration Window 
+.floating-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999; /* Always on top 
+}
+
+.floating-declaration {
+  background: #fff;
+  border-radius: 12px;
+  width: 80%;
+  max-width: 700px;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.declaration-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #eee;
+  background: #f5f5f5;
+}
+
+.declaration-header h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #4a148c;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #333;
+}
+
+.declaration-body {
+  padding: 20px;
+  overflow-y: auto;
+  flex: 1;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.declaration-footer {
+  padding: 15px 20px;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.declaration-footer button {
+  padding: 10px 20px;
+  background: #6a1b9a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.declaration-footer button:hover {
+  background: #4a148c;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.donate-btn {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.donate-btn:hover {
+  background: #388e3c;
+}
+
+ /* Right side info  
+.donate-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}*/

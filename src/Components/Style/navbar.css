@@ -1,0 +1,100 @@
+/* Navbar Base */
+.navbar {
+  @apply sticky top-0 z-50 rounded-2xl mx-auto mt-3;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Navbar Container */
+.nav-container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between h-16 items-center;
+}
+
+/* Logo */
+.nav-logo {
+  @apply text-2xl sm:text-3xl font-extrabold text-indigo-600 animate-pulse;
+}
+
+/* Desktop Links */
+.nav-links {
+  @apply hidden md:flex items-center space-x-6 text-lg font-bold;
+}
+
+/* Fix overlap: no hard padding-left */
+@media (min-width: 1024px) {
+  .nav-links {
+    @apply space-x-10 text-xl;
+  }
+}
+
+.nav-link {
+  @apply text-gray-700 hover:text-indigo-600 font-medium transition;
+}
+
+/* Donate Button */
+.donate-btn {
+  @apply bg-indigo-600 text-white px-4 py-2 rounded-full hover:bg-indigo-500 transition;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.4);
+}
+
+/* Search Bar */
+.search-bar {
+  @apply hidden lg:flex items-center bg-white/70 backdrop-blur-sm px-3 py-1 rounded-full shadow-sm ml-4;
+}
+
+.search-input {
+  @apply bg-transparent focus:outline-none px-2 text-gray-700 placeholder-gray-400;
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+  @apply focus:outline-none md:hidden;
+}
+
+.hamburger {
+  width: 24px;
+  height: 2px;
+  background: #4f46e5;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background: #4f46e5;
+  transition: all 0.3s ease;
+}
+
+.hamburger::before {
+  transform: translateY(-8px);
+}
+
+.hamburger::after {
+  transform: translateY(8px);
+}
+
+.hamburger.open {
+  background: transparent;
+}
+
+.hamburger.open::before {
+  transform: rotate(45deg);
+}
+
+.hamburger.open::after {
+  transform: rotate(-45deg);
+}
+
+/* Mobile Dropdown */
+.mobile-menu {
+  @apply flex flex-col space-y-2 px-4 pb-4 bg-white shadow-md md:hidden rounded-b-2xl;
+}
+
+.mobile-link {
+  @apply text-gray-700 hover:text-indigo-600 font-medium py-2 transition;
+}
